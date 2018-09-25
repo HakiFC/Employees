@@ -5,39 +5,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Employees.Models;
+using Employees.Data;
 
 namespace Employees.Controllers
 {
     public class HomeController : Controller
     {
+        public Connection data = new Connection();
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult About()
+        public async Task<string> getEmployees()
         {
-            ViewData["Message"] = "Your application description page.";
+            var employees = await data.getEmployees();
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return employees.ToString();
         }
     }
 }

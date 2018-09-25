@@ -5,7 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\source\repos\Employees\Employees.Data\Employees.Data.csproj" />
   </ItemGroup>
 
 </Project>
