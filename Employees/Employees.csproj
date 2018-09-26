@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Home\About.cshtml" />
+    <Content Remove="Views\Home\Contact.cshtml" />
+    <Content Remove="Views\Home\Privacy.cshtml" />
     <Content Remove="Views\Shared\Error.cshtml" />
   </ItemGroup>
 
@@ -13,7 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\source\repos\Employees\Employees.Data\Employees.Data.csproj" />
+    <ProjectReference Include="..\Employees.Business\Employees.Logic.csproj" />
+    <ProjectReference Include="..\Employees.WebAPI\Employees.WebAPI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Home\Result.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
   </ItemGroup>
 
 </Project>

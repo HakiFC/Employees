@@ -1,34 +1,20 @@
 ﻿@page
-@model EmployeesModel
 
 <script>
 
     function get() {
-        var strUrl = "/Home/getEmployees";
-        var dataForm = new FormData(document.getElementById("form_employees"));
-        $.ajax({
-            type: 'POST',
-            url: strUrl,
-            dataType: "json",
-            data: dataForm,
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function (response) {
-                console.log(response);
-            }
-        });
+        var strUrl = "/Home/getEmployees?id=" + $("#id_employee").val();
+        $("#result").load(strUrl);
     }
 </script>
 
 <div class="row" style="height:10px"></div>
 <div class="row">
-    <form id="form_employees" name="form_employees" action="" method="post" enctype="multipart/form-data">
-        <div class="col-md-1">Id:</div>
-        <div class="col-md-2">@Html.TextBox("id_employee")</div>
-    </form>
+    <div class="col-md-1">Id:</div>
+    <div class="col-md-2">@Html.TextBox("id_employee")</div>
     <div class="col-md-9">
         <input id="btn_form_employees" type="button" value="Get" class="btn btn-primary form_employees_btnSave" onclick="get();">
     </div>
 </div>
 <div class="row" style="height:10px"></div>
+<div id="result"></div>

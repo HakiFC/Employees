@@ -1,0 +1,24 @@
+﻿@model Employees.Models.ResultModel
+@{
+    Layout = null;
+}
+
+<table border="1" cellpadding="1">
+    <tr>
+        <td width="20%">Contract type</td>
+        <td width="20%">Name</td>
+        <td width="20%">Role name</td>
+        <td width="20%">Role description</td>
+        <td width="20%">Annual salary</td>
+    </tr>
+    @foreach (var i in Model.ListEmployeesContract)
+    {
+        <tr>
+            <td>@i.ContractType</td>
+            <td>@i.Name</td>
+            <td>@i.RoleName</td>
+            <td>@i.RoleName</td>
+            <td>@i.AnnualSalary</td>
+        </tr>
+    }
+</table>
