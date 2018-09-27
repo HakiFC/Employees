@@ -5,13 +5,13 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employees", "Employees\Employees.csproj", "{20167633-41DC-4690-BD86-0287931473F5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employees.Data", "..\source\repos\Employees\Employees.Data\Employees.Data.csproj", "{46CB1268-BAA4-4642-96BC-C54B78D57910}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employees.Data", "Employees.Data\Employees.Data.csproj", "{46CB1268-BAA4-4642-96BC-C54B78D57910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees.WebAPI", "Employees.WebAPI\Employees.WebAPI.csproj", "{C362F125-94AB-49D1-81C7-4320AA04888B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employees.WebAPI", "Employees.WebAPI\Employees.WebAPI.csproj", "{C362F125-94AB-49D1-81C7-4320AA04888B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees.Logic", "Employees.Business\Employees.Logic.csproj", "{6C8A6E97-C363-4764-B1B6-BF1C6CF771C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employees.Logic", "Employees.Business\Employees.Logic.csproj", "{6C8A6E97-C363-4764-B1B6-BF1C6CF771C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees.Entities", "Employees.Entities\Employees.Entities.csproj", "{737C70A6-2E4E-434E-8765-317C19A9DCBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employees.Entities", "Employees.Entities\Employees.Entities.csproj", "{737C70A6-2E4E-434E-8765-317C19A9DCBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
